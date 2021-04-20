@@ -1,0 +1,36 @@
+<div class="container center alert alert-info msj" role="alert">
+  Enter the name or alpha3Code code of the country
+</div>
+
+<input type="text" [(ngModel)]="filterPais" name="filterPais">
+<br /><br />
+
+<br />
+<div>
+  <div class="bd-example">
+    <h2>Countries</h2>
+    <table class="table table-dark">
+      <caption>Countries</caption>
+      <thead>
+        <tr>
+          <th scope="col">Flag</th>
+          <th scope="col">Name</th>
+          <th scope="col">Capital</th>
+          <th scope="col">Region</th>
+          <th scope="col">Area</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of myResponse | filter:filterPais">
+          <th scope="row"><img src={{c.flag}} alt="Error" class="flag"></th>
+          <td>{{c.name}}<br />{{c.alpha3Code}}</td>
+          <td>{{c.capital}}</td>
+          <td>{{c.region}}</td>
+          <td>{{c.area}} km2</td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+</div>

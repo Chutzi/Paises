@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: darkblue;
+    background: url("https://cdn.pixabay.com/photo/2019/10/19/11/32/minimalist-4561192_960_720.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 100%;
+}
